@@ -22,7 +22,7 @@ x_train,x_test, y_train,y_test = train_test_split(y, pressure, test_size= .30, s
 
 
 # neighbors of 11 was arbitrarily choosen but is odd to eliminate ties
-nn_r = KNeighborsRegressor(n_neighbors=10, weights="distance",  n_jobs=-1)
+nn_r = KNeighborsRegressor(n_neighbors=11, weights="distance",  n_jobs=-1)
 pred= nn_r.fit(x_train,y_train).predict(x_test)
 
 
